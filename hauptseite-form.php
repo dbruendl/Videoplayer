@@ -7,12 +7,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Videoplayer</title>
+	<link rel="stylesheet" href="css/horizontal.css">
+	<link rel="stylesheet" href="css/ospb.css">
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+    <link href="css/justified-nav.css" rel="stylesheet">
+	<script src="./js/sly.js"></script>
   </head>
   
   <body>
-    <!-- Fixed navbar -->
+    <!-- /*****************************************************************************************************/
+			Fixed navbar 
+			Zeigt eine Leiste im oberen Bereich die ein Logo, eine Suchleiste und einen Auslog-Button besitzt
+		 /****************************************************************************************************/-->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -41,13 +49,53 @@
       </div>
     </div>
 	
+	
 	</br></br></br>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-md-6 col-sm-6">
+		<!-- /*****************************************************************************************************/
+			
+			Hier ist ein Framework mit dem Namen Sly für eine schöne übersicht der Videos
+			<div class="col-lg-6-offset col-md-6-offset col-sm-6-offset">
 				<h2> Titel </h2>
 				<video src="./vid/video_1.mp4" width="600" height="340" controls/> 	
 			</div>
+		 /****************************************************************************************************/-->
+			<div class="wrap">
+			<h2> Video</h2>
+
+			<div class="scrollbar">
+				<div class="handle">
+					<div class="mousearea"></div>
+				</div>
+			</div>
+
+			<div class="frame effects" id="effects">
+				<ul class="clearfix">
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li><video src="./vid/video_1.mp4" width="500" height="250" controls/></li>
+					<li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
+					<li>19</li><li>20</li><li>21</li><li>22</li><li>23</li><li>24</li><li>25</li><li>26</li><li>27</li>
+					<li>28</li><li>29</li>
+				</ul>
+			</div>
+
+			<div class="controls center">
+				<button class="btn prev"><i class="icon-chevron-left"></i> prev</button>
+				<button class="btn next">next <i class="icon-chevron-right"></i></button>
+			</div>
+		</div>
+			
+			<!-- /*****************************************************************************************************/
+		 
 			<div class="col-lg-4 col-md-4 col-sm-4">
 				<h2> Liste </h2>
 				<ul class="list-unstyled pre-scrollable">
@@ -98,6 +146,14 @@
 				</ul>
 			</div>
 		</div>
+		
+		/****************************************************************************************************/-->
+		
+		<!-- /*****************************************************************************************************/
+			
+			Hier wird eine Übersicht gezeigt die die Informationen zum Video darstellt
+			
+		 /****************************************************************************************************/-->
 	<div class="jumbotron">	
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-4">
@@ -110,15 +166,21 @@
 				<button type="submit" class="btn btn-primary"> Zur Playlist hinzufügen </button>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4">
-				<br><br><br>
-				<button type="submit" class="btn btn-primary">  </button>
+				<br><br><br><br><br><br><br><br><br>
+				<button type="submit" class="btn btn-primary"> noch nicht sicher  </button>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4">
-				<br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br>
 				<button type="submit" class="btn btn-primary"> Neue Playlist erstellen </button>
 			</div>
 		</div>
 	</div>
+	
+	<!-- /******************************************************************************************************************************************************/
+			
+			Die einzelnen Playlists werden untereinander angezeigt jeder mit eine Dropdown-Menü das die einzelnen Lieder anzeigt
+			
+		 /*****************************************************************************************************************************************************/-->
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
 				<h1> Playlists </h1>
@@ -199,6 +261,12 @@
 						</li>
 					</ul>
 			</div>
+			
+			<!-- /*****************************************************************************************************/
+			
+				Hier wird die Top ten aller Lieder angezeigt 
+			
+				/****************************************************************************************************/-->
 			<div class="col-lg-6 col-md-6 col-sm-6">
 				<div class="jumpotron">
 				<h2> Top 10 </h2>
@@ -275,5 +343,8 @@
 	<!-- Ladet das Jquery und Bootstrap-->
     <script src="./js/jquery-1.11.1.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+	<script src="/js/docs.min.js"></script>
+	<script src="js/sly.min.js"></script>
+	<script src="js/horizontal.js"></script>
 	</body>
 </html>
