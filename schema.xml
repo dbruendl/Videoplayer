@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<database name="videoplayer" defaultIdMethod="native">
+		<table name="user" phpName="User">
+			<column name="userId" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+			<column name="username" type="varchar" size="255" required="true"/>
+			<column name="email" type="varchar" size="255" required="true"/>
+			<column name="passwort" type="varchar" size="255" required="true"/>
+			<column name="user_create_date" type="timestamp" />
+			<column name="user_update_date" type="timestamp" />
+			<behavior name="timestampable">
+				<parameter name="create_column" value="user_create_date" />
+				<parameter name="update_column" value="user_update_date" />
+			</behavior>
+		</table>
+		<table name="playlist" phpName="Playlist">
+			<column name="playlistId" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+			<column name="username" type="varchar" size="255" required="true"/>
+			<column name="p_create_date" type="timestamp" />
+			<column name="p_update_date" type="timestamp" />
+			<column name="userId" type="integer" size="255" required="true"/>
+			<foreign-key foreignTable="user" phpName="User" refPhpName="Playlist">
+			  <reference local="userId" foreign="userId"/>
+			</foreign-key>
+			<behavior name="timestampable">
+				<parameter name="create_column" value="p_create_date" />
+				<parameter name="update_column" value="p_update_date" />
+			</behavior>
+		</table>
+		<table name="hat" phpName="Hat">
+			<column name="playlistId" type="integer" required="true" primaryKey="true"/>
+			<column name="videoId" type="integer" required="true" primaryKey="true"/>
+			<foreign-key foreignTable="playlist" phpName="Playlist" refPhpName="Hat">
+			  <reference local="playlistId" foreign="playlistId"/>
+			</foreign-key>
+			<foreign-key foreignTable="video" phpName="Video" refPhpName="Hat">
+			  <reference local="videoId" foreign="videoId"/>
+			</foreign-key>
+		</table>
+		<table name="video" phpName="Video">
+			<column name="videoId" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+			<column name="videoName" type="varchar" size="255" required="true"/>
+			<column name="interpret" type="varchar" size="255" required="true"/>
+			<column name="beschreibung" type="varchar" size="255" required="true"/>
+			<column name="count" type="integer" required="true"/>
+			<column name="pfad" type="varchar" size="255" required="true"/>
+			<column name="userId" type="integer" size="255" required="true"/>
+			<foreign-key foreignTable="user" phpName="User" refPhpName="Video">
+			  <reference local="userId" foreign="userId"/>
+			</foreign-key>
+		</table>
+	</database>

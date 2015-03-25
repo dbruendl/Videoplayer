@@ -1,0 +1,18 @@
+propel:
+  database:
+      connections:
+          videoplayer:
+              adapter: mysql
+              classname: Propel\Runtime\Connection\ConnectionWrapper
+              dsn: "mysql:host=localhost;dbname=videoplayer"
+              user: vuser
+              password: vuser
+              attributes:
+  runtime:
+      defaultConnection: videoplayer
+      connections:
+          - videoplayer
+  generator:
+      defaultConnection: videoplayer
+      connections:
+          - videoplayer

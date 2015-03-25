@@ -36,6 +36,18 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
 			<li><a href="anmeldung-form.php">Ausloggen</a></li>
+			<li class="dropdown">
+				<a href="topten-form.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Top 10 <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+				<li><a href="topten-form.php">Übersicht</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Separated link</a></li>
+				<li class="divider"></li>
+				<li><a href="#">One more separated link</a></li>
+			  </ul>
+			</li>
             </li>
           </ul>
 		  <form class="navbar-form navbar-left" role="search">
@@ -45,6 +57,9 @@
 			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 			<!--<button type="submit" class="btn btn-link"><img src="./img/magnifier.png" height="20" width="25"><img></button>-->
 		 </form>
+		 <ul class="nav navbar-nav">
+			<li> <a href="playlist-form.php"> Playlists </a>
+		 </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -157,7 +172,7 @@
 	<div class="jumbotron">	
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-4">
-			<h1> Info </h1>
+			<h2> Info </h2>
 				<ul class="list-unstyled">
 					<li> Titel: </li>
 					<li> Interpret: </li>
@@ -166,175 +181,16 @@
 				<button type="submit" class="btn btn-primary"> Zur Playlist hinzufügen </button>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4">
-				<br><br><br><br><br><br><br><br><br>
-				<button type="submit" class="btn btn-primary"> noch nicht sicher  </button>
+				<br><br><br><br><br><br><br>
+				<button type="submit" class="btn btn-primary"> User </button>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4">
-				<br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br>
 				<button type="submit" class="btn btn-primary"> Neue Playlist erstellen </button>
 			</div>
 		</div>
 	</div>
-	
-	<!-- /******************************************************************************************************************************************************/
-			
-			Die einzelnen Playlists werden untereinander angezeigt jeder mit eine Dropdown-Menü das die einzelnen Lieder anzeigt
-			
-		 /*****************************************************************************************************************************************************/-->
-		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6">
-				<h1> Playlists </h1>
-					<ul class="list-unstyled pre-scrollable">
-						<li>
-							<div class="dropdown">
-								<button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Playlist 1
-								<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-									<li> Titel 1</li>
-									<li> Titel 2</li>
-									<li> Titel 3</li>
-									<li> Titel 4</li>
-								</ul>
-							</div>
-						</li>
-						<br>
-						<li>
-							<div class="dropdown">
-								<button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Playlist 2
-								<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-									<li> Titel 1</li>
-									<li> Titel 2</li>
-									<li> Titel 3</li>
-									<li> Titel 4</li>
-								</ul>
-							</div>
-						</li>
-						<br>
-						<li>
-							<div class="dropdown">
-								<button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Playlist 3
-								<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-									<li> Titel 1</li>
-									<li> Titel 2</li>
-									<li> Titel 3</li>
-									<li> Titel 4</li>
-								</ul>
-							</div>
-						</li>
-						<br>
-						<li>
-							<div class="dropdown">
-								<button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Playlist 4
-								<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-									<li> Titel 1</li>
-									<li> Titel 2</li>
-									<li> Titel 3</li>
-									<li> Titel 4</li>
-								</ul>
-							</div>
-						</li>
-						<br>
-						<li>
-							<div class="dropdown">
-								<button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Playlist 5
-								<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-									<li> Titel 1</li>
-									<li> Titel 2</li>
-									<li> Titel 3</li>
-									<li> Titel 4</li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-			</div>
-			
-			<!-- /*****************************************************************************************************/
-			
-				Hier wird die Top ten aller Lieder angezeigt 
-			
-				/****************************************************************************************************/-->
-			<div class="col-lg-6 col-md-6 col-sm-6">
-				<div class="jumpotron">
-				<h2> Top 10 </h2>
-				<ul class="list-unstyled pre-scrollable">
-					<ul>
-						<li><a> Video 01	</a>
-							<button type="input" class="btn btn-primary">Play</button> 
-							<button type="input" class="btn btn-primary">+</button> 
-							<button type="input" class="btn btn-primary">-</button>
-						</li>
-						<br>
-						<li><a> Video 02	</a>
-								<button type="input" class="btn btn-primary">Play</button> 
-								<button type="input" class="btn btn-primary">+</button> 
-								<button type="input" class="btn btn-primary">-</button>
-						</li>
-						<br>
-						<li><a> Video 03	</a>
-							<button type="input" class="btn btn-primary">Play</button> 
-							<button type="input" class="btn btn-primary">+</button> 
-							<button type="input" class="btn btn-primary">-</button>
-						</li>
-						<br>
-						<li><a> Video 04	</a>
-							<button type="input" class="btn btn-primary">Play</button> 
-							<button type="input" class="btn btn-primary">+</button> 
-							<button type="input" class="btn btn-primary">-</button>
-						</li>
-						<br>
-						<li><a> Video 05	</a>
-							<button type="input" class="btn btn-primary">Play</button> 
-							<button type="input" class="btn btn-primary">+</button> 
-							<button type="input" class="btn btn-primary">-</button>
-						</li>
-						<br>
-						<li><a> Video 06	</a>
-							<button type="input" class="btn btn-primary">Play</button> 
-							<button type="input" class="btn btn-primary">+</button> 
-							<button type="input" class="btn btn-primary">-</button>
-						</li>
-						<br>
-						<li><a> Video 07	</a>
-							<button type="input" class="btn btn-primary">Play</button> 
-							<button type="input" class="btn btn-primary">+</button> 
-							<button type="input" class="btn btn-primary">-</button>
-						</li>
-						<br>
-						<li><a> Video 08	</a>
-							<button type="input" class="btn btn-primary">Play</button> 
-							<button type="input" class="btn btn-primary">+</button> 
-							<button type="input" class="btn btn-primary">-</button>
-						</li>
-						<br>
-						<li><a> Video 09	</a>
-							<button type="input" class="btn btn-primary">Play</button> 
-							<button type="input" class="btn btn-primary">+</button> 
-							<button type="input" class="btn btn-primary">-</button>
-						</li>
-						<br>
-						<li><a> Video 10</a>
-							<button type="input" class="btn btn-primary">Play</button> 
-							<button type="input" class="btn btn-primary">+</button> 
-							<button type="input" class="btn btn-primary">-</button>
-						</li>	
-					</ul>
-				</ul>
-			</div>
-			</div>
+
 		</div>
 	</div>
 	<!-- Bootstrap core JavaScript
